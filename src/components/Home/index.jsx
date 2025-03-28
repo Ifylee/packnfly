@@ -6,11 +6,11 @@ const LoginLogout = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Motion transition properties
-  const transitionProps = {
-    opacity: isLoggedIn ? 1 : 0, // Fade in when logged in, fade out when logged out
-    y: isLoggedIn ? 0 : -20, // Slide in when logged in, slide out when logged out
-    transition: { type: 'spring', stiffness: 200, damping: 25 }, // Spring-based animation
-  };
+  // const transitionProps = {
+  //   opacity: isLoggedIn ? 1 : 0, // Fade in when logged in, fade out when logged out
+  //   y: isLoggedIn ? 0 : -20, // Slide in when logged in, slide out when logged out
+  //   transition: { type: 'spring', stiffness: 200, damping: 25 }, // Spring-based animation
+  // };
 
   // Handler for logging in
   const handleLogin = () => {
@@ -24,10 +24,12 @@ const LoginLogout = () => {
 
   return (
     <div>
-      <motion.div style={{ display: 'inline-block' }} {...transitionProps}>
+      {/* <motion.div style={{ display: 'inline-block' }} {...transitionProps}> */}
         {isLoggedIn ? (
           <div>
-            <p>Welcome, you're logged in!</p>
+            <p>Travel Smart</p>
+            <p>Travel Easy</p>
+            <p>PacknFly!</p>
             <button onClick={handleLogout}>Logout</button>
           </div>
         ) : (
@@ -36,7 +38,7 @@ const LoginLogout = () => {
             <button onClick={handleLogin}>Login</button>
           </div>
         )}
-      </motion.div>
+      {/* </motion.div> */}
     </div>
   );
 };
